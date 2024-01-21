@@ -1,5 +1,10 @@
-from cpf import Cpf
+from document import Document
 
-cpf_one = Cpf("15316264754")
 
-print(cpf_one)
+ex_cnpj = "35379838000112"
+ex_cpf = "32007832062"
+document = Document.make_document(ex_cpf)
+document2 = Document.make_document(ex_cnpj)
+
+print(document)
+print(document2)
