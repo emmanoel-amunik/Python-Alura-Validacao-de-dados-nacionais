@@ -1,10 +1,5 @@
 from cpf import Cpf
 
+cpf_one = Cpf("15316264754")
 
-cpf = 15616447913
-
-# cpf_size = len(str(cpf))
-# print(cpf_size)
-
-object_cpf = Cpf(cpf)
-print(object_cpf)
+print(cpf_one)

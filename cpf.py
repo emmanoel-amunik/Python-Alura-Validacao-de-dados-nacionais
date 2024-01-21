@@ -1,3 +1,6 @@
+from validate_docbr import CPF
+
+
 class Cpf:
 
     def __init__(self, document):
@@ -15,13 +18,11 @@ class Cpf:
     def valid_cpf(document):
 
         if len(document) == 11:
-            return True
-        elif len(document) != 11:
-            return False
+            validator = CPF()
+            return validator.validate(document)
+        else:
+            raise ValueError("Number of digits invalid!")
 
     def format_cpf(self):
-        slice_one = self.cpf[:3]
-        slice_two = self.cpf[3:6]
-        slice_three = self.cpf[6:9]
-        slice_four = self.cpf[9:]
-        return f"{slice_one}.{slice_two}.{slice_three}-{slice_four}"
+        cpf_mask = CPF()
+        return cpf_mask.mask(self.cpf)
