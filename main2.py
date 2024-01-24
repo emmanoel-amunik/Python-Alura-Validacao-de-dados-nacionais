@@ -1,7 +1,12 @@
 import re
+from cellphonesBR import CellphonesBR
 
-pattern = "\w{5,50}@\w{3,10}.\w{2,3}.\w{2,3}"  # email
-text = "aaabbbcc rodrigo123@gmail.com.br"
-answer = re.search(pattern, text)
 
-print(answer.group())
+cellphone = "552126481234"
+
+# pattern = "([0-9]{2,3})?([0-9]{2})([0-9]{4,5})([0-9]{4})"
+# answer = re.search(pattern, cellphone)
+# print(answer.group())
+
+cellphone_object = CellphonesBR(cellphone)
+print(cellphone_object)
