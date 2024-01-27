@@ -1,6 +1,7 @@
-from datetime import datetime, timedelta
-from datesBR import DatesBR
+from acess_cep import AddressSearch
 
 
-today = DatesBR()
-print(today.register_time())
+cep = 25870145
+obj_cep = AddressSearch(cep)
+
+print(obj_cep)

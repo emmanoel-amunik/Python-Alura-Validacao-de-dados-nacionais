@@ -33,3 +33,12 @@ cellphone = "552126481234"
 
 cellphone_object = CellphonesBR(cellphone)
 print(cellphone_object)
+
+
+# DATES
+
+
+from datesBR import DatesBR
+
+today = DatesBR()
+print(today.register_time())
